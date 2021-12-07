@@ -15,8 +15,7 @@ fn part1() {
 
     let res = reader
         .lines()
-        .map(|r| r.unwrap())
-        .map(|s| s.parse::<i32>().unwrap())
+        .map(|r| r.unwrap().parse::<i32>().unwrap())
         .fold((0, 0), |accum, depth| {
             if depth > accum.1 {
                 return (accum.0 + 1, depth);
@@ -33,8 +32,7 @@ fn part2() {
 
     let input: Vec<i32> = reader
         .lines()
-        .map(|s| s.unwrap())
-        .map(|s| s.parse::<i32>().unwrap())
+        .map(|s| s.unwrap().parse::<i32>().unwrap())
         .collect();
 
     let mut res = 0;
